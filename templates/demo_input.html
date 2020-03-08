@@ -38,14 +38,19 @@
 				<i class="fa fa-close" aria-hidden="true"></i>
 			</button>
 
-			<form class="contact100-form validate-form">
+			<form class="contact100-form validate-form" method="POST">
 				<span class="contact100-form-title">
 					Input your text speech
 				</span>
 
 				<div class="wrap-input100 validate-input" data-validate = "Message is required">
 					<span class="label-input100">Message</span>
-					<textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+					<textarea class="input100" name="text" placeholder="Your message here..." maxlength=200></textarea>
+					<input type="file" name="fileupload" accept="image/*" />
+					<input type="checkbox" name="maths" value="on"> Southern
+					<input type="checkbox" name="physics" value="on"> Northern
+					<input type="radio" name="subject" value="maths"> Male
+					<input type="radio" name="subject" value="physics"> Female
 					<span class="focus-input100"></span>
 				</div>
 

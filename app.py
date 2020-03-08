@@ -10,19 +10,18 @@ def main():
 
 
 
-@app.route("/demo_input" , methods=['GET', 'POST'])
-def demo_input():
+@app.route("/demo" , methods=['GET', 'POST'])
+def demo():
     if request.method == 'POST':
-        return render_template('demo_audio.html')
+        if "back" in request.form:
+            return render_template('demo_input.html')
+        text = request.form['text']
+        audio="static/audio/"+"download.wav"
+        return render_template('demo_audio.html', text=text,audio=audio)
     else:
         return render_template('demo_input.html')
         #return "Nhan"
 
-
-
-@app.route("/demo_output")
-def demo_output():
-    return render_template('demo_audio.html')
 
 
 if __name__ == "__main__":
