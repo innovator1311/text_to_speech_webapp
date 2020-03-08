@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+	
+	
+	<form action=”” method=”POST”>
+		<label> Input your text speech </label>
+		<input type=”text” name=”username” value={{request.form.username}}>
+		<button type=”submit”> Submit </button>
+	</form>
+
+	<audio controls>
+	<source src="{{ url_for('static',filename='audio/download.wav') }}" type="audio/wav">
+	</audio>
+	<img src="static/img/development-shepe-blue.png" alt="">
+</body>
+</html>
+
+
