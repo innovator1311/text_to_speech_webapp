@@ -20,6 +20,11 @@ def demo_input():
 
 
 
+@app.route("/demo_output")
+def demo_output():
+    return render_template('demo_audio.html')
+
+
 if __name__ == "__main__":
     app.run(port=5011)
 
